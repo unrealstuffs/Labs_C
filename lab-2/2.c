@@ -23,18 +23,17 @@ int main() {
         }
     }
 
-    // Check positive and negative numbers after a[max]
-    for(int i = 0; i < n; i++) {
-        if(a[i] < 0 && i > max_index) {
-            mult *= a[i];
-        } else if(a[i] >= 0 && i > max_index) {
-            sum += a[i];
+    // Multiplying elements by a[i]
+    for(int i = 0; i <= n; i += 2) {
+        if(i < max_index) {
+            a[i] *= max;
         }
     }
 
-    // Print results
-    printf("Удвоенная сумма всех положительных элементов массива: %f \n", sum * 2);
-    printf("Удвоенное произведение всех отрицательных элементов массива %f \n", mult * 2);
+    // Print output array
+    for(int i = 0; i < n; i++) {
+        printf("%d \n", a[i]);
+    }
     
     return 0;
 }

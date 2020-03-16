@@ -8,8 +8,9 @@ int main() {
     printf("Введите n: "); scanf("%i", &n);
     printf("Введите a: "); scanf("%f", &a);
 
-    for(int i = 0; i < n; i++) {
-        sum += 1. / pow(a, pow(2, i));
+    for(int i = 1; i <= n; i++) {
+        sum += 1. / a;
+        a *= a;
     }
 
     printf("Конечное число: %f \n", sum);
